@@ -7,6 +7,7 @@ const HouseSchema = new Schema(
     kind: { type: String, required: true },
     mortgageAmount: { type: Number, required: true },
     rentAmount: { type: Number, required: true },
+    address: { type: String, required: true },
   },
   { timestamps: true }
 );

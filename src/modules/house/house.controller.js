@@ -11,13 +11,14 @@ const getHouse = async (req, res) => {
 
 const createHouse = async (req, res) => {
   try {
-    const { id, title, kind, mortgageAmount, rentAmount } = req.body;
+    const { id, title, kind, mortgageAmount, rentAmount, address } = req.body;
     const newHouse = await HouseModel.create({
       id,
       title,
       kind,
       mortgageAmount,
       rentAmount,
+      address,
     });
     res.send(newHouse);
   } catch (error) {
