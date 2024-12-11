@@ -27,4 +27,16 @@ const createHouse = async (req, res) => {
     });
   }
 };
-module.exports = { getHouse, createHouse };
+
+const getById = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const result = await HouseModel.findOne({ id });
+    res.send(result);
+  } catch (error) {
+    res.json({
+      message: error.message || "server error",
+    });
+  }
+};
+module.exports = { getHouse, createHouse, getById };
