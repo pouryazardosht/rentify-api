@@ -10,11 +10,11 @@ function SwaggerDocument(app) {
                 version: "0.1.0",
                 description:
                     "Platform for Renting Houses",
-            },
-            contact: {
-                name: "Pourya Zardosht",
-                email: "pooriyazardosht.812@gmail.com",
-                url: "https://rentify.liara.run/"
+                contact: {
+                    name: "Rentify",
+                    email: "pooriyazardosht.812@gmail.com",
+                    url: "https://rentify.liara.run/"
+                },
             },
             servers: [
                 {
