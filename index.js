@@ -2,6 +2,8 @@ const express = require("express");
 const dotenv = require("dotenv");
 const mainRouter = require("./src/app.router");
 const cors = require("cors");
+const SwaggerDocument = require("./src/config/swagger.config")
+
 dotenv.config();
 
 const app = express();
@@ -16,6 +18,7 @@ app.use(
     })
 );
 require("./src/config/mongoose.config");
+SwaggerDocument(app)
 
 app.use(mainRouter);
 app.listen(port, () => {
