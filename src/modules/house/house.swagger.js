@@ -54,6 +54,10 @@
  *  get:
  *      summary: Get list of all houses
  *      tags: [House]
+ *      parameters:
+ *          - in: query
+ *            name: tag
+ *            type: string
  *      responses:
  *          200:
  *              description: The list of the houses

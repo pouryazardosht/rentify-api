@@ -4,7 +4,7 @@ const HouseSchema = new Schema(
     {
         id: {type: Number, required: true, unique: true},
         title: {type: String, required: true},
-        tag: {type: String, required: false},
+        tag: {type: String, required: true},
         kind: {type: String, required: true},
         mortgageAmount: {type: Number, required: true},
         rentAmount: {type: Number, required: true},

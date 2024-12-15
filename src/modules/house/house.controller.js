@@ -16,8 +16,7 @@ const getHouse = async (req, res) => {
                 message: error.message || "server error",
             });
         }
-    }
-    else {
+    } else {
         res.send({
             statusCode: 200,
             documentCount: houses.length,
@@ -28,10 +27,11 @@ const getHouse = async (req, res) => {
 
 const createHouse = async (req, res) => {
     try {
-        const {id, title, kind, mortgageAmount, rentAmount, address} = req.body;
+        const {id, title, tag, kind, mortgageAmount, rentAmount, address} = req.body;
         const newHouse = await HouseModel.create({
             id,
             title,
+            tag,
             kind,
             mortgageAmount,
             rentAmount,
